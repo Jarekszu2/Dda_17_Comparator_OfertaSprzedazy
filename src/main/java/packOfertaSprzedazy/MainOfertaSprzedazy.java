@@ -1,7 +1,8 @@
-package packCompareZad2;
+package packOfertaSprzedazy;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class MainOfertaSprzedazy {
@@ -32,6 +33,28 @@ public class MainOfertaSprzedazy {
             System.out.println(ofertaSprzedazy);
         }
 
-        // System.out.println(listaOfertSprzedaży);
+        System.out.println();
+        Collections.sort(listaOfertSprzedaży, new Comparator<OfertaSprzedazy>() {
+            public int compare(OfertaSprzedazy o1, OfertaSprzedazy o2) {
+                boolean flag = false;
+                if (flag) {
+                    if (o1.getCena() > o2.getCena()){
+                        return -1;
+                    } else if (o1.getCena() < o2.getCena()) {
+                        return 1;
+                    }
+                    return 0;
+                } else {
+                    if (o1.getCena() > o2.getCena()) {
+                        return 1;
+                    } else  if (o1.getCena() < o2.getCena()) {
+                        return -1;
+                    }
+                    return 0;
+                }
+
+            }
+        });
+        listaOfertSprzedaży.forEach(System.out::println);
     }
 }

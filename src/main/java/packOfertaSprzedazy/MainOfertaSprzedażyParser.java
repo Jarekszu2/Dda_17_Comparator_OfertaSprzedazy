@@ -1,4 +1,4 @@
-package packCompareZad2;
+package packOfertaSprzedazy;
 
 public class MainOfertaSprzedażyParser {
 }
