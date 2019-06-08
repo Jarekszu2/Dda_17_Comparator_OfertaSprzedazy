@@ -41,6 +41,18 @@ public class MainOfertaSprzedażyParser {
                                 OfertaSprzedazy osc = new OfertaSprzedazy(chleb, cenaChleba);
                                 listaOfertSprzedaży.add(osc);
                                 break;
+                            case 'c':
+                                String ser = "ser";
+                                double cenaSera = podajCeneProduktu();
+                                OfertaSprzedazy oss = new OfertaSprzedazy(ser, cenaSera);
+                                listaOfertSprzedaży.add(oss);
+                                break;
+                            case 'd':
+                                String dzem = "dżem";
+                                double cenaDzemu = podajCeneProduktu();
+                                OfertaSprzedazy osd = new OfertaSprzedazy(dzem, cenaDzemu);
+                                listaOfertSprzedaży.add(osd);
+                                break;
                         }
                     } while (warunekProduktu != 'w');
                     break;
@@ -54,7 +66,9 @@ public class MainOfertaSprzedażyParser {
                     listaOfertSprzedaży.forEach(System.out::println);
                     break;
                 case 'd':
-                    System.out.println("opcja w przygotowaniu");
+                    System.out.println("Sortowanie listy malejąco.");
+                    Collections.sort(listaOfertSprzedaży,new OfertaComparator(false));
+                    listaOfertSprzedaży.forEach(System.out::println);
                     break;
             }
         } while (warunekKomendy != 'w');
