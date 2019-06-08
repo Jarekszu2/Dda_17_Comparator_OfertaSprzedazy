@@ -86,5 +86,7 @@ public class MainOfertaSprzedażyParser {
             }
         }while (flag);
         return cenaProduktu;
+
+        // projekt przerzucono do katalogu Gda/17 i utworzono repo Gda_17
     }
 }
