@@ -1,4 +1,4 @@
-package packOfertaSprzedazy;
+package packOfertaSprzedazyComparator;
 
 import java.util.Comparator;
 

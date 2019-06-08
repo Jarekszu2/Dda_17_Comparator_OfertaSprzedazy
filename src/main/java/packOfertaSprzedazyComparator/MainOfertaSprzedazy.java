@@ -1,4 +1,4 @@
-package packOfertaSprzedazy;
+package packOfertaSprzedazyComparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,9 +34,11 @@ public class MainOfertaSprzedazy {
         }
 
         System.out.println();
+        final boolean flagaLokalna = true;
+
         Collections.sort(listaOfertSprzedaży, new Comparator<OfertaSprzedazy>() {
             public int compare(OfertaSprzedazy o1, OfertaSprzedazy o2) {
-                boolean flag = false;
+                boolean flag = flagaLokalna;
                 if (flag) {
                     if (o1.getCena() > o2.getCena()){
                         return -1;
